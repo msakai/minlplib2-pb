@@ -1,5 +1,7 @@
 # coding: utf-8
 
+require 'stringio'
+
 def negate_expr(s)
   s.gsub(/(^|\+|-)(\d+)/){
     if $1 == '-'
@@ -53,6 +55,19 @@ def trans(s, out)
   else
     raise RuntimeError.new("failed to detect optimization direction")
   end
+
+  /^Variables (.*?);/mi =~ s
+  vs = $1.split(/\s*,\s*/)
+
+  vs.each{|v|
+    if v == "objvar"
+      next
+    elsif /b\d+/ =~ v
+      next
+    else
+      raise RuntimeError.new("unknown variable #{v.inspect}")
+    end
+  }
   
   cs = []
   s.scan(/^\w+\.\.\s+(.*?);/mi){|c,| cs.push c }
