@@ -1,4 +1,4 @@
-* #variable= 91 #constraint= 481 #product= 60 sizeproduct= 95
+* #variable= 91 #constraint= 481 #product= 35 sizeproduct= 70
 min: -2 x5 +2 x5 x50 -3 x50 +2 x5 x62 -1 x62 -2 x5 x74 +5 x74 +2 x5 x90 +1 x90 +2 x7 x60 -1 x7 -2 x60 +2 x9 x60 -1 x9 +2 x13 x50 +2 x13 x56 -1 x56 -2 x13 x74 -2 x13 x86 +3 x86 +2 x15 x47 -1 x47 +2 x15 x50 -2 x15 x68 +3 x68 -2 x15 x74 +2 x25 x74 -2 x25 x90 +2 x26 x74 -2 x26 x90 +2 x28 x72 +1 x28 -2 x28 x75 +2 x75 -2 x28 x87 +1 x87 -2 x29 x63 +3 x29 +2 x63 -2 x29 x69 +1 x69 -2 x29 x75 -2 x33 x74 +2 x33 -2 x33 x86 -2 x34 x68 +2 x34 -2 x34 x74 -2 x37 x74 +2 x37 -2 x37 x86 -2 x38 x68 +2 x38 -2 x38 x74 -2 x43 x63 +3 x43 -2 x43 x66 +1 x66 -2 x43 x72 +12 x91 ;
 +1 x1 -1 x2 -1 x3 >= -1 ;
 -1 x3 +1 x4 -1 x5 >= -1 ;

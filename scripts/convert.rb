@@ -167,13 +167,14 @@ def trans(s, out)
       xs = []
       s.scan(/x(\d+)/){ xs.push($1.to_i) }
       xs.sort!
-      products.push xs
+      products.push xs if xs.size > 1
       s2 = xs.map{|n| "x" + n.to_s }.join("*")
       #puts "#{s} -> #{s2}" if s != s2      
       raise RuntimeError.new("#{s.inspect}.size != #{s2.inspect}.size") if s.size != s2.size
       s2
     }
 
+    products.uniq!
     sizeproduct = 0
     products.each{|xs| sizeproduct += xs.size }
 
